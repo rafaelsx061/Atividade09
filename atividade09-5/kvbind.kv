@@ -1,0 +1,12 @@
+<MyContainer>:
+    orientation: 'vertical' # Os widgets filhos serão organizados na vertical
+    TextInput:
+        id: meu_input
+        multiline: False  # Impede que o usuário digite múltiplas linhas
+    Label:
+        text: meu_input.text
+    Label:
+        id: aviso
+        text: "" # Começa vazio, será alterado dinamicamente
+        on_text: Clock.schedule_once(lambda dt: setattr(self, 'text', ''), 2) # Limpa após 2 segundos
+        on_text: aviso.text = "Você está digitando..."
