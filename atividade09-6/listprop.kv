@@ -1,0 +1,10 @@
+<ListaItensWidget>:
+    orientation: 'vertical' # Organiza os widgets na vertical (um abaixo do outro)
+    Label: # Rótulo que mostra os itens da lista
+        text: ', '.join(root.lista_de_compras)
+    TextInput:
+        id: input_item
+        multiline: False  # Impede que o usuário digite várias linhas
+    Button: # Botão que adiciona um novo item à lista
+        text: "Adicionar Item"
+        on_release: root.adicionar_item(input_item.text)  # Ao soltar o botão, chama o método do root com o texto digitado
