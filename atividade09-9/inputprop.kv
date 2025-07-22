@@ -1,0 +1,10 @@
+<InputPropWidget>:
+    orientation: 'vertical'
+    TextInput:
+        id: meu_input_texto
+        multiline: False
+    Label:
+        id: label_id
+    Button:
+        text: "Confirmar"
+        on_release: label_id.text = meu_input_texto.text
